@@ -1,0 +1,19 @@
+<article>
+  <h4 class="h4">Template Driven</h4>
+
+  <form #user = "ngForm" (ngSubmit)="onClickSubmit(user)">
+    <input class="input" type="text" name="name" ngModel placeholder="Insira seu nome completo...">
+
+    <input class="input" type="email" name="email"  ngModel placeholder="Insira seu e-mail...">
+
+    <input class="input" type="number" name="phone"  ngModel placeholder="insira seu telefone">
+
+    <input type="submit" value="Enviar">
+  </form>
+
+  <section *ngIf="name" class="result">
+    <p class="body-regular">Cadastro realizado com sucesso: {{ name }} </p>
+  </section>
+
+
+</article>

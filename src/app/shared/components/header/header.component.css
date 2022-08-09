@@ -1,0 +1,11 @@
+ul {
+  padding: 1.5rem;
+  display: flex;
+  gap: 2rem;
+}
+
+a:hover {
+  padding: 1rem;
+  background-color: var(--neutral-800);
+  color: var(--white);
+}

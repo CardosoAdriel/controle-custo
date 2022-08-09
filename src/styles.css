@@ -13,7 +13,7 @@
     --neutral-700: #666275;
     --neutral-900: #292538;
     --neutral-800: #484357;
-    
+
     --primary-100: #d0c2ff;
     --primary-200: #b6a1ff;
     --primary-300: #9c80ff;
@@ -52,53 +52,53 @@
     --information-300: #5e9fd5;
     --information-200: #81b5df;
     --information-100: #a4cae9;
-  
+
     /* Typography */
-  
+
     --fs-display-1: 11.92rem;
     --fw-display-1: bold;
     --lh-display-1: 2;
-    
+
     --fs-display-2: 9.54rem;
     --fw-display-2: bold;
     --lh-display-2: normal;
-    
+
     --fs-heading-1: 7.63rem;
     --fw-heading-1: bold;
     --lh-heading-1: normal;
-    
+
     --fs-heading-2: 6.1rem;
     --fw-heading-2: bold;
     --lh-heading-2: normal;
-    
+
     --fs-heading-3: 4.88rem;
     --fw-heading-3: bold;
     --lh-heading-3: normal;
-    
+
     --fs-heading-4: 3.91rem;
     --fw-heading-4: bold;
     --lh-heading-4: normal;
-    
+
     --fs-heading-5: 3.13rem;
     --fw-heading-5: bold;
     --lh-heading-5: normal;
-    
+
     --fs-heading-6: 2.5rem;
     --fw-heading-6: bold;
     --lh-heading-6: normal;
-    
+
     --fs-body-large: 3.2rem;
     --fw-body-large: normal;
     --lh-body-large: 1.5;
-    
+
     --fs-body-regular: 2.4rem;
     --fw-body-regular: normal;
     --lh-body-regular: 1.67;
-    
+
     --fs-body-small: 1.6rem;
     --fw-body-small: normal;
     --lh-body-small: 2;
-  
+
     /* Spacing */
     --spacing-xxs: 0.4rem;
     --spacing-xs: 0.8rem;
@@ -108,9 +108,9 @@
     --spacing-xl: 2.4rem;
     --spacing-xxl: 2.8rem;
   }
-  
+
   /* Reset CSS */
-  
+
   /*
       Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
       - The "symbol *" part is to solve Firefox SVG sprite bug
@@ -119,7 +119,7 @@
     all: unset;
     display: revert;
   }
-  
+
   /* Preferred box-sizing value and remove margin and padding */
   *,
   *::before,
@@ -128,72 +128,98 @@
     margin: 0;
     padding: 0;
   }
-  
+
   /* Define source for font size and family */
   html {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 62.5%;
   }
-  
+
   body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 1.6rem;
     height: 100vh;
   }
-  
+
   /* Text elements */
   p, h1, h2, h3, h4, h5, h6, span, div, section, a, ul, button {
     color: var(--neutral-700);
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  } 
-  
+  }
+
   a {
     color: inherit;
     text-decoration: none;
   }
-  
+
   /* Reapply the pointer cursor for anchor tags */
   a, button {
     cursor: pointer;
   }
-  
+
   /* Remove list styles (bullets/numbers) */
   ol, ul, menu {
     list-style: none;
   }
-  
+
   /* For images to not be able to exceed their container */
   img {
     max-width: 100%;
   }
-  
+
   /* removes spacing between cells in tables */
   table {
     border-collapse: collapse;
   }
-  
+
   /* revert the 'white-space' property for textarea elements on Safari */
   textarea {
     white-space: revert;
   }
-  
+
   /* minimum style to allow to style meter element */
   meter {
     -webkit-appearance: revert;
     appearance: revert;
   }
-  
+
   /* reset default text opacity of input placeholder */
   ::placeholder {
-    color: unset;
+    color: var(--neutral-400);
   }
-  
+  /* reset default appearence arrows of input type number */
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  input[type=number] {
+   -moz-appearance: textfield;
+   appearance: textfield;
+  }
+
+  input[type=submit] {
+    padding: 1rem;
+    border: 0.1rem solid var(--neutral-400);
+    border-radius: 1rem;
+    background-color: var(--neutral-900);
+    color: var(--white);
+    cursor: pointer;
+  }
+
+  .input {
+    margin: 1rem;
+    border: 0.1rem solid var(--neutral-400);
+    border-radius: 1rem;
+    padding: 1rem;
+    color: var(--neytral-500);
+  }
+
   /* fix the feature of 'hidden' attribute.
    display:revert; revert to element instead of attribute */
   :where([hidden]) {
     display: none;
   }
-  
+
   /* revert for bug in Chromium browsers
    - fix for the content editable attribute will work properly. */
   :where([contenteditable]) {
@@ -202,77 +228,77 @@
     overflow-wrap: break-word;
     /* -webkit-line-break: after-white-space; */
   }
-  
+
   /* apply back the draggable feature - exist only in Chromium and Safari */
   :where([draggable="true"]) {
     -webkit-user-drag: element;
   }
-  
+
   /* Heading style */
-  
+
   .display-1 {
     font-size: var(--fs-display-1);
     font-weight: var(--fw-display-1);
     line-height: var(--lh-display-1);
   }
-  
+
   .display-2 {
     font-size: var(--fs-display-2);
     font-weight: var(--fw-display-2);
     line-height: var(--lh-display-2);
   }
-  
+
   .h1 {
     font-size: var(--fs-heading-1);
     font-weight: var(--fw-heading-1);
     line-height: var(--lh-heading-1);
   }
-  
+
   .h2 {
     font-size: var(--fs-heading-2);
     font-weight: var(--fw-heading-2);
     line-height: var(--lh-heading-2);
   }
-  
+
   .h3 {
     font-size: var(--fs-heading-3);
     font-weight: var(--fw-heading-3);
     line-height: var(--lh-heading-3);
   }
-  
+
   .h4 {
     font-size: var(--fs-heading-4);
     font-weight: var(--fw-heading-4);
     line-height: var(--lh-heading-4);
   }
-  
+
   .h5 {
     font-size: var(--fs-heading-5);
     font-weight: var(--fw-heading-5);
     line-height: var(--lh-heading-5);
   }
-  
+
   .h6 {
     font-size: var(--fs-heading-6);
     font-weight: var(--fw-heading-6);
     line-height: var(--lh-heading-6);
   }
-  
-  
+
+
   /* Body text */
-  
+
   .body-large {
     font-size: var(--fs-body-large);
     font-weight: var(--fw-body-large);
     line-height: var(--lh-body-large);
   }
-  
+
   .body-regular {
     font-size: var(--fs-body-regular);
     font-weight: var(--fw-body-regular);
     line-height: var(--lh-body-regular);
   }
-  
+
   .body-small {
     font-size: var(--fs-body-small);
     font-weight: var(--fw-body-small);

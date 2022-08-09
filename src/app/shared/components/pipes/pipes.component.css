@@ -1,8 +1,11 @@
-main {
+.article {
   width: 100vw;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 2rem;
+  align-items: center;
+}
+
+.wrapper {
+  text-align: center;
 }

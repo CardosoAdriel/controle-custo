@@ -1,0 +1,16 @@
+
+.form {
+  display: flex;
+  gap: 1rem;
+}
+
+.result {
+  padding: 1rem;
+}
+
+.btn {
+  background-color: var(--neutral-800);
+  padding: 1rem;
+  color: var(--white);
+  border-radius: 1rem;
+}

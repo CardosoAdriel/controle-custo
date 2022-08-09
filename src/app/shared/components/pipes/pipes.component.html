@@ -1,0 +1,48 @@
+<article class="article">
+  <section class="wrapper">
+    <h3>Uppercase Pipe</h3>
+    <p class="body-regular">{{ title | uppercase}}</p>
+  </section>
+
+  <section class="wrapper">
+    <h3>Lowercase Pipe</h3>
+    <p class="body-regular">{{ title | lowercase}}</p>
+  </section>
+
+  <section class="wrapper">
+    <h3>Date Pipe</h3>
+    <p class="body-regular">{{ dataHoje | date }}</p>
+    <p class="body-regular">{{ dataHoje | date: 'dd/MM/yy'}}</p>
+    <p class="body-regular">{{ dataHoje | date: 'shortTime'}}</p>
+  </section>
+
+  <section class="wrapper">
+    <h3>Decimal Pipe</h3>
+    <p class="body-regular">{{ 454.7854214 | number: '3.2-2' }}</p>
+  </section>
+
+  <section class="wrapper">
+    <h3>Json Pipe</h3>
+    <p class="body-regular">{{ umJson | json }}</p>
+  </section>
+
+  <section class="wrapper">
+    <h3>Percent Pipe</h3>
+    <p class="body-regular">{{ 00.310 | percent }}</p>
+  </section>
+
+  <section class="wrapper">
+    <h3>Slice Pipe</h3>
+    <p class="body-regular">{{ mesAno | slice: 0:4 }}</p>
+  </section>
+
+  <section class="wrapper">
+    <h3>Custom Pipe raiz-quadrada</h3>
+    <p class="body-regular">A raiz quadrada de 25 é: {{ 25 | raizQuadrada | number: '.2-2' }}</p>
+    <p class="body-regular">A raiz quadrada de 80 é: {{ 80 | raizQuadrada | number: '.2-2' }}</p>
+    <p class="body-regular">A raiz quadrada de 420 é: {{ 420 | raizQuadrada | number: '.2-2' }}</p>
+  </section>
+
+
+
+</article>

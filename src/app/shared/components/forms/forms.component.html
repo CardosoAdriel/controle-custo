@@ -1,0 +1,21 @@
+<app-template-driven></app-template-driven>
+<br><br>
+<article>
+  <h4 class="h4">Model Driven</h4>
+
+  <form [formGroup]="formdata" (ngSubmit)="enviarDados(formdata)">
+    <input class="input" type="text" name="desc" formControlName="desc" placeholder="Produto ...">
+
+    <input class="input" type="number" name="quantity" formControlName="quantity" placeholder="Quantidade ...">
+
+    <input class="input" type="number" name="price"  formControlName="price" placeholder="Preço ...">
+
+    <input type="submit" value="Enviar" [disabled]="!formdata.valid">
+  </form>
+
+  <section *ngIf="produto" class="result">
+    <p class="body-regular"> {{ produto | json }} </p>
+  </section>
+
+
+</article>
