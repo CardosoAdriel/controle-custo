@@ -1,0 +1,19 @@
+<ng-container>
+  <form [formGroup]="formOrcamento" (ngSubmit)="setOrcamento(formOrcamento.value)" class="form-orcamento">
+
+    <input class="input"
+      type="text"
+      name="valor"
+      placeholder="Valor do orçamento"
+      formControlName="valor"
+    >
+
+    <input type="submit" value="Enviar Orçamento" [disabled]="!formOrcamento.valid">
+  </form>
+</ng-container>
+
+<ng-container #saldo>
+
+</ng-container>
+
+

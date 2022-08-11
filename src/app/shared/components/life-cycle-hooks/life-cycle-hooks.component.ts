@@ -1,33 +1,35 @@
-import { 
-  AfterContentChecked, 
-  AfterContentInit, 
-  AfterViewChecked, 
-  AfterViewInit, 
-  Component, 
-  DoCheck, 
-  Input, 
-  OnChanges, 
-  OnInit, 
-  SimpleChanges 
+import {
+  AfterContentChecked,
+  AfterContentInit,
+  AfterViewChecked,
+  AfterViewInit,
+  Component,
+  DoCheck,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges
 } from '@angular/core';
+import { BaseService } from '../../services/base/base.service';
 
 @Component({
   selector: 'app-life-cycle-hooks',
   templateUrl: './life-cycle-hooks.component.html',
   styleUrls: ['./life-cycle-hooks.component.css']
 })
-export class LifeCycleHooksComponent implements 
+export class LifeCycleHooksComponent implements
   OnInit, OnChanges, DoCheck, AfterContentChecked, AfterContentInit, AfterViewInit, AfterViewChecked
 {
   @Input() value: number = 0
 
-  constructor() { }
+  constructor(private baseService: BaseService) { }
 
   changes() {
     this.value++
   }
 
   ngOnInit(): void {
+    console.log("LIFE-CYCLE", this.baseService.getDataService())
     console.log(`app-life-cycle-hooks - ngOnInit`)
   }
 

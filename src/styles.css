@@ -201,10 +201,15 @@
     padding: 1rem;
     border: 0.1rem solid var(--neutral-400);
     border-radius: 1rem;
-    background-color: var(--neutral-900);
+    background-color: var(--primary-1000);
     color: var(--white);
     cursor: pointer;
   }
+
+  input[type=submit]:disabled {
+    background-color: var(--neutral-600);
+  }
+
 
   .input {
     margin: 1rem;

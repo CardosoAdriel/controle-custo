@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { OrcamentoService } from 'src/app/pages/services/orcamento.service';
+import { BaseService } from '../../services/base/base.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  valorOrcamento!: number;
+
+  constructor(private orcamentoService: OrcamentoService) {
+    this.orcamentoService.getValor().subscribe(value => this.valorOrcamento = value)
+  }
 
   ngOnInit() {
+
   }
 
 }

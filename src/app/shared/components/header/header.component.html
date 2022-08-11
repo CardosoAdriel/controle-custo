@@ -1,5 +1,23 @@
 <nav>
+
+  <figure>
+    <img src="../../../../assets/logo-header.png" alt="Logo Training">
+  </figure>
+
+  <h3 class="h3"
+    [ngClass]="{
+      'colorGreen': valorOrcamento > 0,
+      'colorRed': valorOrcamento < 0
+    }"
+  >
+    {{ valorOrcamento | currency }}
+  </h3>
+
   <ul>
+    <li><a href="cadastro">Cadastro</a></li>
+    <li><a href="compras">Compras</a></li>
+  </ul>
+  <!-- <ul>
     <li>
       <a href="/life-cycles">Life Cycles</a>
     </li>
@@ -9,5 +27,5 @@
     <li>
       <a href="/forms">Forms</a>
     </li>
-  </ul>
+  </ul> -->
 </nav>

@@ -3,10 +3,10 @@ import { PipesComponent } from './shared/components/pipes/pipes.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LifeCycleHooksComponent } from './shared/components/life-cycle-hooks/life-cycle-hooks.component';
-import { HomeComponent } from './pages/home/home.component';
+import { CadastroComponent } from './pages/cadastro/cadastro.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: '', component: CadastroComponent},
   {path: 'pipes', component: PipesComponent},
   {path: 'life-cycles', component: LifeCycleHooksComponent},
   {path: 'forms', component: FormsComponent}
