@@ -14,10 +14,8 @@ import { PipesComponent } from './shared/components/pipes/pipes.component';
 import { FormsComponent } from './shared/components/forms/forms.component';
 import { TemplateDrivenComponent } from './shared/components/forms/template-driven/template-driven.component';
 import { DirectivasComponent } from './shared/components/directivas/directivas.component';
-import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { MoedaRealDirective } from './shared/components/directivas/personalizada/moeda-real.directive';
 import { RealMoedaPipe } from './shared/components/pipes/pipe-personalizado/realMoeda.pipe';
-import { OrcamentoComponent } from './pages/cadastro/orcamento/orcamento.component';
 
 registerLocaleData(ptBr);
 
@@ -31,10 +29,8 @@ registerLocaleData(ptBr);
     FormsComponent,
     TemplateDrivenComponent,
     DirectivasComponent,
-    CadastroComponent,
     MoedaRealDirective,
     RealMoedaPipe,
-    OrcamentoComponent
   ],
   imports: [
     AppRoutingModule,

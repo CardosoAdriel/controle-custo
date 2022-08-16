@@ -187,6 +187,7 @@
   ::placeholder {
     color: var(--neutral-400);
   }
+
   /* reset default appearence arrows of input type number */
   input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -195,28 +196,6 @@
   input[type=number] {
    -moz-appearance: textfield;
    appearance: textfield;
-  }
-
-  input[type=submit] {
-    padding: 1rem;
-    border: 0.1rem solid var(--neutral-400);
-    border-radius: 1rem;
-    background-color: var(--primary-1000);
-    color: var(--white);
-    cursor: pointer;
-  }
-
-  input[type=submit]:disabled {
-    background-color: var(--neutral-600);
-  }
-
-
-  .input {
-    margin: 1rem;
-    border: 0.1rem solid var(--neutral-400);
-    border-radius: 1rem;
-    padding: 1rem;
-    color: var(--neytral-500);
   }
 
   /* fix the feature of 'hidden' attribute.
@@ -308,4 +287,98 @@
     font-size: var(--fs-body-small);
     font-weight: var(--fw-body-small);
     line-height: var(--lh-body-small);
+  }
+
+
+  input[type=submit] {
+    padding: 1rem;
+    border: 0.1rem solid var(--neutral-400);
+    border-radius: 1rem;
+    background-color: var(--primary-1000);
+    color: var(--white);
+    cursor: pointer;
+  }
+
+  input[type=submit]:disabled {
+    background-color: var(--neutral-600);
+  }
+
+  .input {
+    margin: 1rem;
+    border: 0.1rem solid var(--neutral-400);
+    border-radius: 1rem;
+    padding: 1rem;
+    color: var(--neytral-500);
+  }
+
+  .btn {
+    padding: 1rem;
+    border: 0.1rem solid var(--neutral-400);
+    border-radius: 1rem;
+    background-color: var(--primary-1000);
+    color: var(--white);
+    cursor: pointer;
+  }
+
+  .btn:disabled {
+    background-color: var(--neutral-600);
+  }
+
+  /* Spacings */
+
+  /* Margin Vertical */
+  .mv-1 {
+    margin: 1rem 0;
+  }
+  .mv-2 {
+    margin: 2rem 0;
+  }
+  .mv-3 {
+    margin: 3rem 0;
+  }
+
+  /* Margin Horizontal */
+  .mh-1 {
+    margin: 0 1rem;
+  }
+  .mh-2 {
+    margin: 0 2rem;
+  }
+  .mh-3 {
+    margin: 0 3rem;
+  }
+
+  /* Alinhamentos  */
+  .header {
+    height: 8rem;
+  }
+
+  .container {
+    max-width: 1280px;
+    width: 100%;
+  }
+
+  .element-center {
+    margin: 0 auto;
+  }
+
+  .txt-center {
+    text-align: center;
+  }
+
+  /* flex-box */
+
+  .align-center {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .in-column {
+    flex-direction: column;
+  }
+
+  .d-gap {
+    gap: 1rem;
   }
